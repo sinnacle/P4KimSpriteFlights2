@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class NewMonoBehaviourScript : MonoBehaviour
 {
     public float thrustForce = 1f;
+    public float maxSpeed = 5f;
     Rigidbody2D rb;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -16,12 +17,22 @@ public class NewMonoBehaviourScript : MonoBehaviour
     void Update()
     {
         if (Mouse.current.leftButton.isPressed) {
+            // Calculate mouse direction
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.value);
-            Debug.Log("Mouse position: " + mousePos);
+            Vector2 direction = (mousePos - transform.position).normalized;
 
-            Vector2 direction = mousePos - transform.position;
+            // Move player in direction of mouse
             transform.up = direction;
             rb.AddForce(direction * thrustForce);
+            if (rb.linearVelocity.magnitude > maxSpeed)
+            {
+                rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
+            }
         }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(gameObject);
     }
 }
