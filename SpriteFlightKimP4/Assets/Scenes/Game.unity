@@ -1064,6 +1064,7 @@ MonoBehaviour:
   scoreMultiplier: 10
   thrustForce: 4
   maxSpeed: 5
+  boosterFlame: {fileID: 420941511}
 --- !u!1001 &1391947123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1074,11 +1075,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1407089401864924055, guid: 975223a446e6fdf40a052ce19d6b8a9d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.49
+      value: -2.5450296
       objectReference: {fileID: 0}
     - target: {fileID: 1407089401864924055, guid: 975223a446e6fdf40a052ce19d6b8a9d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.15
+      value: 1.6986535
       objectReference: {fileID: 0}
     - target: {fileID: 1407089401864924055, guid: 975223a446e6fdf40a052ce19d6b8a9d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1098,7 +1099,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1407089401864924055, guid: 975223a446e6fdf40a052ce19d6b8a9d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.25594962
+      value: -0.2559496
       objectReference: {fileID: 0}
     - target: {fileID: 1407089401864924055, guid: 975223a446e6fdf40a052ce19d6b8a9d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1820,11 +1821,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1407089401864924055, guid: 975223a446e6fdf40a052ce19d6b8a9d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.12
+      value: 0.22
       objectReference: {fileID: 0}
     - target: {fileID: 1407089401864924055, guid: 975223a446e6fdf40a052ce19d6b8a9d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.06
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1407089401864924055, guid: 975223a446e6fdf40a052ce19d6b8a9d, type: 3}
       propertyPath: m_LocalPosition.z

@@ -9,6 +9,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     public float thrustForce = 1f;
     public float maxSpeed = 5f;
     Rigidbody2D rb;
+    public GameObject boosterFlame;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,6 +25,15 @@ public class NewMonoBehaviourScript : MonoBehaviour
         Debug.Log("Score: " + score);
 
         if (Mouse.current.leftButton.isPressed) {
+            if (Mouse.current.leftButton.wasPressedThisFrame)
+            {
+                boosterFlame.SetActive(true);
+            }
+            else if (Mouse.current.leftButton.wasReleasedThisFrame)
+            {
+                boosterFlame.SetActive(false);
+            }
+
             // Calculate mouse direction
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.value);
             Vector2 direction = (mousePos - transform.position).normalized;
