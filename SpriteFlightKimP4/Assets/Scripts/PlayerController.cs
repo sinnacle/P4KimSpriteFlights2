@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
     public float maxSpeed = 5f;
     Rigidbody2D rb;
     public GameObject boosterFlame;
+    public UIDocument uiDocument;
+    private Label scoreText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
