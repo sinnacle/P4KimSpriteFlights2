@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     private float elapsedTime = 0f;
     private float score = 0f;
@@ -18,6 +18,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        scoreText = uiDocument.rootVisualElement.Q<Label>("ScoreLabel");
     }
 
     // Update is called once per frame
@@ -26,6 +27,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         elapsedTime += Time.deltaTime;
         score = Mathf.FloorToInt(elapsedTime * scoreMultiplier);
         Debug.Log("Score: " + score);
+        scoreText.text = "Score: " + score;
 
         if (Mouse.current.leftButton.isPressed) {
             if (Mouse.current.leftButton.wasPressedThisFrame)
